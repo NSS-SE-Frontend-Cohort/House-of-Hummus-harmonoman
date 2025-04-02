@@ -6,4 +6,10 @@ graph TD;
     B --> |Imports| E[Vegetables Module];
     B --> |Imports| F[Sides Module];
 
+    D --> |Imports| G[Transient State Module]
+    E --> |Imports| G[Transient State Module]
+    F --> |Imports| G[Transient State Module]
+
+
+
 
