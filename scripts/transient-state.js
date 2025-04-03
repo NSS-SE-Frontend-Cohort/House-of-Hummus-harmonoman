@@ -1,19 +1,20 @@
 const transientState = {
+    
     entreeId: 0,
     vegetableId: 0,
     sideId: 0
 }
 
-const setEntree = (entreeSelection) => {
-    entreeId(entreeSelection);
+export const setEntree = (entreeSelection) => {
+    transientState.entreeId = entreeSelection;
 }
 
-const setVegetable = (vegetableSelection) => {
-    entreeId(vegetableSelection);
+export const setVegetable = (vegetableSelection) => {
+    transientState.vegetableId = vegetableSelection;
 }
 
-const setSide = (sideSelection) => {
-    entreeId(sideSelection);
+export const setSide = (sideSelection) => {
+    transientState.sideId = sideSelection;
 }
 
 const resetTransientState = () => {
@@ -29,9 +30,7 @@ export const placeOrder = async () => {
         body:  JSON.stringify(transientState)
     }
 
-    const  response = await fetch("http://localhost:8088/orders", postOptions);
+    const  response = await fetch("http://localhost:8088/purchases", postOptions);
 
     resetTransientState();
-
-    document.dispatchEvent(new CustomEvent("newOrderPlaced"));
 }
