@@ -1,3 +1,5 @@
+import { setSide } from "./transient-state.js";
+
 export const Sides = async () => {
     const response = await fetch("http://localhost:8088/sides")
     const sides = await response.json();
@@ -16,3 +18,10 @@ export const Sides = async () => {
     return optionsHTML;
 }
 
+export const handleSidesChoice = (event) => {
+    if(event.target.name === "side") {
+        setSide(parseInt(event.target.value));
+    }
+}
+
+document.addEventListener("change", handleSidesChoice)

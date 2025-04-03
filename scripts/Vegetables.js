@@ -1,3 +1,5 @@
+import { setVegetable } from "./transient-state.js";
+
 export const Veggies = async () => {
     const response = await fetch("http://localhost:8088/vegetables")
     const vegetables = await response.json();
@@ -15,3 +17,11 @@ export const Veggies = async () => {
 
     return optionsHTML;
 }
+
+export const handleVegetableChoice = (event) => {
+    if(event.target.name === "vegetable") {
+        setVegetable(parseInt(event.target.value));
+    }
+}
+
+document.addEventListener("change", handleVegetableChoice);
