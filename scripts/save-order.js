@@ -1,12 +1,12 @@
-import { placeOrder } from "./transient-state.js";
+import { PlaceOrder } from "./transient-state.js";
 
 export const handlePlaceOrderClick = async (clickEvent) => {
     if (clickEvent.target.id === "purchase") {
-        await placeOrder();
+        await PlaceOrder();
     }
 }
 
-export const saveOrder = () => {
+export const SaveOrder = () => {
     document.addEventListener("click", handlePlaceOrderClick); 
     return `<button id="purchase">Purchase Combo</button>`;
 }

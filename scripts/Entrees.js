@@ -1,4 +1,4 @@
-import { setEntree } from "./transient-state.js"
+import { SetEntree } from "./transient-state.js"
 
 export const Entrees = async () => {
     const response = await fetch("http://localhost:8088/entrees")
@@ -20,7 +20,7 @@ export const Entrees = async () => {
 
 export const handleEntreeChoice = (event) => {
     if(event.target.name === "entree") {
-        setEntree(parseInt(event.target.value));
+        SetEntree(parseInt(event.target.value));
     }
 } 
 

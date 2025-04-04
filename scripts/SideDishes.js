@@ -1,4 +1,4 @@
-import { setSide } from "./transient-state.js";
+import { SetSide } from "./transient-state.js";
 
 export const Sides = async () => {
     const response = await fetch("http://localhost:8088/sides")
@@ -20,7 +20,7 @@ export const Sides = async () => {
 
 export const handleSidesChoice = (event) => {
     if(event.target.name === "side") {
-        setSide(parseInt(event.target.value));
+        SetSide(parseInt(event.target.value));
     }
 }
 
