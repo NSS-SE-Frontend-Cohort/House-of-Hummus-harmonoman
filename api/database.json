@@ -133,39 +133,9 @@
   "purchases": [
     {
       "entreeId": 1,
-      "vegetableId": 1,
+      "vegetableId": 9,
       "sideId": 1,
       "id": 1
-    },
-    {
-      "entreeId": 4,
-      "vegetableId": 5,
-      "sideId": 2,
-      "id": 2
-    },
-    {
-      "entreeId": 12,
-      "vegetableId": 9,
-      "sideId": 6,
-      "id": 3
-    },
-    {
-      "entreeId": 3,
-      "vegetableId": 4,
-      "sideId": 4,
-      "id": 4
-    },
-    {
-      "entreeId": 12,
-      "vegetableId": 9,
-      "sideId": 6,
-      "id": 5
-    },
-    {
-      "entreeId": 4,
-      "vegetableId": 5,
-      "sideId": 2,
-      "id": 6
     }
   ]
 }
